@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="Description" content="《英魂之刃》是一款类DOTA的多人竞技网游，拥有无需下载，即点即玩，10秒开局，qq登录，精美画面，爽快体验等游戏特色和优势。进入游戏后，即可体验充满魔幻风格的游戏世界，领略原创英雄角色和强力技能，在还原三路5V5经典模式的同时，更创新单路决战之谷模式，出门即可10人团战，最快享受激情团战体验！并且还有一端双玩法全新RPG、PVE模式，与玩家一起打造巅峰战场。游戏入驻腾讯QQ游戏大厅后，更是人气飙升，是中国风第一DOTA网游">
+    <meta name="Keywords" content="英魂之刃，英魂之刃官方网站，英魂之刃官网，DOTA页游，英魂，英魂之刃下载，微端下载，英魂之刃礼包，新手礼包，新英雄，活跃度，微信，龙骑士，绑定，英魂视频，比赛，周免，英魂之刃攻略，MOBA，即下即玩，无需注册，10秒加载,30秒开局，dota网页版，英雄出装，5v5,10v10，RPG,PVE，兑换码，中国风，魔幻，黄金十二宫，兑换码，天赋，LOL网页版，竞技游戏">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <!-- UC默认竖屏 ，UC强制全屏 -->
+    <meta name="full-screen" content="yes" />
+    <meta name="browsermode" content="application" />
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="landscape">
+    <!-- QQ强制竖屏 QQ强制全屏 -->
+    <meta name="x5-orientation" content="landscape" />
+    <meta name="x5-fullscreen" content="true" />
+    <meta name="x5-page-mode" content="app" />
+    <meta name="author" content="php(206742) | 2017-07-28">
+    <title>画布共创--《英魂之刃》官方网站，唯一原创微端竞技精品大作！10秒加载,30秒开局！</title>
+    <script src="http://news.99.com/script/g_topmenu.js" charset="GBK"></script>
+    <script src="http://news.cos.99.com/script/public.js"></script>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="main">
+        <canvas id="canvas" class="canvas">您的浏览器不支持canvas</canvas>
+        <!--top-nav-->
+        <div class="top-nav">
+            <!--login-con-->
+            <div class="login-con">
+                <div>
+                    <p class="user-name login">大王叫我来巡山</p>
+                    <a href="javascript:;" class="arrow-btn">
+                    	<div class="login-out">退出登录</div>
+                    </a>
+                </div>
+                <p class="disabled-active-time">离活动结束时间还有XX天XX时XX分</p>
+            </div>
+            <!--/login-con-->
+            <!--tool-box-->
+            <div class="tool-box">
+                <a href="javascript:;" class="scale-btn">
+					<span class="tool-tip">放大</span>
+				</a>
+                <a href="javascript:;" class="small-btn">
+					<span class="tool-tip">缩小</span>
+				</a>
+                <a href="javascript:;" class="screenshot-btn">
+					<span class="tool-tip">载存当地画布到本地</span>
+				</a>
+            </div>
+            <!--/tool-box-->
+            <!--tip-btn-->
+            <div class="tip-wrap">
+                <a href="javascript:;" class="tip-btn active"><!-- active -->
+				</a>
+                <div class="tip-con">
+                    <h6>提示</h6>
+                    <div class="operate-info">
+                        <h6></h6>
+                        <p><img src="images/tip-context.png" style="padding-top: 20px;padding-left: 10px;"></p>
+                    </div>
+                </div>
+            </div>
+            <!--/tip-btn-->
+            <!--share-btn-->
+            <a href="javascript:;" class="share-btn rubberBand">立即分享</a>
+            <!--/share-btn-->
+        </div>
+        <!--/top-nav-->
+        <!--current-info-box-->
+        <div class="current-info-box">
+            <p class="current-num">
+                <em>1</em>
+                <em>3</em>
+                <em>4</em>
+                <em>5</em>
+                <em>8</em>
+            </p>
+            <p class="use-times">0165</p>
+            <p class="current-times">12</p>
+            <p class="disabled-time">2:28</p>
+        </div>
+        <!--/current-info-box-->
+        <!--canvas-->
+        <!--/canvas-->
+        <!--coordinate-info-->
+        <div class="coordinate-info">
+            <i class="icon-coorinate"></i>
+            <span class="j-point">X1920,Y468</span>
+        </div>
+        <!--/coordinate-info-->
+        <!--color-sidebar-->
+        <div class="color-sidebar j-colors">
+            <span class="active" data-color="#ff73cd">
+				<i class="icon-arrow ani-shake"></i>
+			</span>
+            <span data-color="#da1934">
+				<i class="icon-arrow ani-shake"></i>
+			</span>
+            <span data-color="#feb81a">
+				<i class="icon-arrow ani-shake"></i>
+			</span>
+            <span data-color="#fff81b">
+				<i class="icon-arrow ani-shake"></i>
+			</span>
+            <span data-color="#01fe70">
+				<i class="icon-arrow ani-shake"></i>
+			</span>
+            <span data-color="#0c851b">
+				<i class="icon-arrow ani-shake"></i>
+			</span>
+            <span data-color="#52dbff">
+				<i class="icon-arrow ani-shake"></i>
+			</span>
+            <span data-color="#2d2dff">
+				<i class="icon-arrow ani-shake"></i>
+			</span>
+            <span data-color="#7124a4">
+				<i class="icon-arrow ani-shake"></i>
+			</span>
+            <span data-color="#000000">
+				<i class="icon-arrow ani-shake"></i>
+			</span>
+            <span data-color="#959595">
+				<i class="icon-arrow ani-shake"></i>
+			</span>
+            <span data-color="#FFFFFF">
+				<i class="icon-arrow ani-shake"></i>
+			</span>
+        </div>
+        <!--/color-sidebar-->
+        <!--btns-box-->
+
+        <div class="btns-box hide">
+            <a href="javascript:;" class="ok-btn"></a>
+            <a href="javascript:;" class="cancel-btn"></a>
+        </div>
+        <!--/btns-box-->
+        <span class="toast-tip">你好<span>
+        <!--loading-->
+        <div class="loading-wrap hide">
+       		<span class="loading"></span>
+       		<p>刷刷刷，机器娘在努力</p>
+       		<p>加载大佬们的杰作</p>
+        </div>
+    </div>
+    <!--/main-->
+
+    <!--pop-->
+    <div class="pop hide">
+        <div class="pop-main">
+            <a href="javascript:;" class="close-btn"></a>
+            <div class="pop-con">
+                <p>SORRY啦~</p>
+                <p>您当前处于禁止时间内哦，
+                    <br>点击分享立即获取填坑次数！</p>
+            </div>
+            <a href="javascript:;" class="share-btn">立即分享</a>
+        </div>
+        <div class="fade-bg"></div>
+    </div>
+    <img src="images/test.jpg" class="hide" id="image">
+    <!--/pop-->
+    <div class="third-login hide">
+    	<a href="javascript:;" class="wb-login login-icon"></a>
+    	<a href="javascript:;" class="qq-login login-icon"></a>
+    </div>
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/socket.io-1.2.0.js"></script>
+    <script type="text/javascript" src="js/bitmap.js"></script>
+    <script type="text/javascript" src="js/saveImage.js"></script>
+    <script type="text/javascript" src="js/canvas.js"></script>
+    <script type="text/javascript" src="js/clipborad.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <!--测试-->
+    <script type="text/javascript" src="js/imageToBitMap.js"></script>
+    <!--stats-code-->
+    <div style="display:none">
+        <script type="text/javascript">
+        pings();
+        </script>
+    </div>
+    <!--/stats-code-->
+</body>
+
+</html>

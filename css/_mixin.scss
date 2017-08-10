@@ -1,0 +1,155 @@
+@mixin display-inline {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+@mixin cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@mixin fixedCover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@mixin animation($str...) {
+    -webkit-animation: $str;
+    animation: $str;
+}
+
+@mixin margin-center-x($width) {
+    position: absolute;
+    left: 50%;
+    margin-left: ($width / -2);
+}
+
+@mixin margin-center-y($height) {
+    position: absolute;
+    top: 50%;
+    margin-top: ($height / -2);
+}
+
+@mixin margin-center($width,$height) {
+    position: absolute;
+    left:50%;
+    top: 50%;
+    margin: ($height / -2) 0 0 ($width / -2);
+}
+
+@mixin cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@mixin fixedCover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@mixin ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@mixin border-radius($lt,$rt,$rb,$lb) {
+    -webkit-border-radius: $lt $rt $rb $lb;
+    -moz-border-radius: $lt $rt $rb $lb;
+    border-radius: $lt $rt $rb $lb;
+}
+
+@mixin line-clamp-overflow($line) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+}
+
+@mixin box-shadow($shadow...) {
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
+
+@mixin text-shadow($shadow...) {
+    -webkit-text-shadow: $shadow;
+    -moz-text-shadow: $shadow;
+    text-shadow: $shadow;
+}
+
+@mixin word-break {
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+@mixin opacity($op) {
+    opacity: $op/100;
+    filter: alpha(opacity=$op);
+}
+
+@mixin animation($str...) {
+    -webkit-animation: $str;
+    animation: $str;
+}
+
+@mixin transform($str) {
+    -webkit-transform: $str;
+    -moz-transform: $str;
+    transform: $str;
+}
+
+@mixin transform-origin($str) {
+    -webkit-transform-origin: $str;
+    -moz-transform-origin: $str;
+    transform-origin: $str;
+}
+
+@mixin transition($str...) {
+    -webkit-transition: $str;
+    -moz-transition: $str;
+    transition: $str;
+}
+
+@mixin transition-delay($str) {
+    -webkit-transition-delay: $str;
+    -moz-transition-delay: $str;
+    transition-delay: $str;
+}
+
+@mixin animation-delay($s...) {
+    -webkit-animation-delay: $s;
+    -moz-animation-delay: $s;
+    animation-delay: $s;
+}
+
+@mixin animation-duration($s...) {
+    -webkit-animation-duration: $s;
+    -moz-animation-duration: $s;
+    animation-duration: $s;
+}
+
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {
+        @content
+    }
+;
+    @keyframes #{$name} {
+        @content
+    }
+;
+}

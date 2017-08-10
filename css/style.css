@@ -1,0 +1,1218 @@
+/************************************
+ Use for:         new.cos.99.com
+ Version:         1.0
+ Date:            2017-07-28
+ Author:          php
+ Employee number: 206742
+ Update:
+ *************************************/
+/***********************reset***********************/
+/* line 2, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/reset */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td, span, object, iframe {
+  padding: 0;
+  margin: 0; }
+
+/* line 7, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/reset */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 12, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/reset */
+fieldset, img {
+  border: 0; }
+
+/* line 16, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/reset */
+ol, ul {
+  list-style: none; }
+
+/* line 20, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/reset */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-size: 100%; }
+
+/* line 25, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/reset */
+body {
+  font: 12px/1.6 "Microsoft YaHei"; }
+
+/* line 29, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/reset */
+a {
+  text-decoration: none; }
+
+/* line 33, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/reset */
+a, a *, a:hover {
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s; }
+
+/* line 41, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/reset */
+.clearfix:after, .top-nav .login-con:after, .top-nav .tool-box:after, .coordinate-info:after {
+  content: "";
+  height: 0;
+  visibility: hidden;
+  display: block;
+  clear: both; }
+
+/* line 49, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/reset */
+.clearfix, .top-nav .login-con, .top-nav .tool-box, .coordinate-info {
+  zoom: 1; }
+
+/* line 53, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/reset */
+.hide {
+  display: none !important; }
+
+/* line 57, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/reset */
+.fl {
+  float: left; }
+
+/* line 61, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/reset */
+.fr {
+  float: right; }
+
+/* line 65, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/reset */
+i, em {
+  font-style: normal; }
+
+/* line 1, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+body {
+  background-color: #e8dfc0; }
+  /* line 4, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  body a:hover {
+    cursor: url("../images/icon-cursor.ico"), -moz-zoom-out;
+    cursor: url("../images/icon-cursor.ico"), pointer; }
+  /* line 8, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  body a:active {
+    cursor: url("../images/icon-cursor-active.ico"), -moz-zoom-out;
+    cursor: url("../images/icon-cursor-active.ico"), pointer; }
+
+/* line 16, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+html, body {
+  width: 100%;
+  height: 100%; }
+
+/* line 21, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+.ab-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+
+/* line 29, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+.ab-center-x {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%); }
+
+/* line 36, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+.ab-center-y, .top-nav .tip-con > h6 {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
+/*************main*************/
+/* line 50, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+.main {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  background: url("../images/bg.jpg") no-repeat top center; }
+  /* line 56, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .main .canvas {
+    position: absolute;
+    cursor: move; }
+
+/*************top-nav*************/
+/* line 68, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+.top-nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 92px;
+  background: url("../images/top-nav-bg.png") no-repeat;
+  z-index: 20;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease; }
+  /* line 78, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .top-nav .login-con {
+    height: 76px;
+    line-height: 76px;
+    font-size: 20px;
+    color: #feb81a;
+    padding: 0 20px;
+    margin-left: 40px; }
+    /* line 86, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    .top-nav .login-con div {
+      float: left;
+      height: 76px; }
+    /* line 90, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    .top-nav .login-con p {
+      float: left; }
+  /* line 94, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .top-nav .arrow-btn {
+    float: left;
+    position: relative;
+    cursor: pointer;
+    display: block;
+    width: 31px;
+    height: 44px;
+    background: url("../images/btn-arrow.png") no-repeat center;
+    margin: 16px 6px; }
+    /* line 103, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    .top-nav .arrow-btn:hover {
+      background-color: #ffd118;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      border: 2px solid #ca6615; }
+    /* line 109, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    .top-nav .arrow-btn:hover .login-out {
+      display: block; }
+    /* line 112, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    .top-nav .arrow-btn .login-out {
+      position: absolute;
+      width: 210px;
+      display: none;
+      height: 60px;
+      top: 43px;
+      right: -2px;
+      border-radius: 5px;
+      border-top-right-radius: 0;
+      background-color: #ffd118;
+      border: 2px solid #ca6615;
+      border-top: none;
+      text-align: center;
+      line-height: 60px;
+      font-weight: bold;
+      color: white;
+      -webkit-text-shadow: 0 0 4px #ca6615, 0 0 4px #ca6615, 0 0 4px #ca6615;
+      -moz-text-shadow: 0 0 4px #ca6615, 0 0 4px #ca6615, 0 0 4px #ca6615;
+      text-shadow: 0 0 4px #ca6615, 0 0 4px #ca6615, 0 0 4px #ca6615; }
+  /* line 134, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .top-nav .disabled-active-time {
+    color: #FFF;
+    margin-left: 8px; }
+  /* line 138, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .top-nav .tool-box {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin-left: -165px;
+    width: 330px;
+    height: 76px; }
+    /* line 146, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    .top-nav .tool-box a {
+      position: relative;
+      float: left;
+      display: block;
+      width: 33.33%;
+      height: 76px; }
+      /* line 153, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+      .top-nav .tool-box a:hover .tool-tip {
+        opacity: 1;
+        top: 80px; }
+    /* line 159, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    .top-nav .tool-box .tool-tip {
+      position: absolute;
+      top: 85px;
+      left: 50%;
+      margin-left: -80px;
+      opacity: 0;
+      display: block;
+      width: 146px;
+      min-height: 16px;
+      line-height: 16px;
+      text-align: center;
+      font-size: 16px;
+      font-weight: bold;
+      color: #000;
+      padding: 1px 8px 0 18px;
+      background: url("../images/box-bg-middle.png") repeat-y;
+      -webkit-transition: all 0.35s;
+      -moz-transition: all 0.35s;
+      -ms-transition: all 0.35s;
+      -o-transition: all 0.35s;
+      transition: all 0.35s; }
+      /* line 181, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+      .top-nav .tool-box .tool-tip:before, .top-nav .tool-box .tool-tip:after {
+        position: absolute;
+        left: 0;
+        content: '';
+        display: block;
+        z-index: 2; }
+      /* line 188, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+      .top-nav .tool-box .tool-tip:before {
+        top: -15px;
+        width: 172px;
+        height: 16px;
+        background: url("../images/box-bg-top.png") no-repeat top center; }
+      /* line 194, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+      .top-nav .tool-box .tool-tip:after {
+        bottom: -19px;
+        width: 172px;
+        height: 19px;
+        background: url("../images/box-bg-bottom.png") no-repeat top center; }
+  /* line 202, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .top-nav .scale-btn {
+    display: block;
+    width: 62px;
+    background: url("../images/btn-scale.png") no-repeat center center; }
+    /* line 206, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    .top-nav .scale-btn:hover {
+      background: url("../images/btn-scale-hover.png") no-repeat center center; }
+    /* line 209, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    .top-nav .scale-btn:active {
+      background: url("../images/btn-scale.png") no-repeat center center; }
+  /* line 213, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .top-nav .small-btn {
+    display: block;
+    width: 50px;
+    background: url("../images/btn-small.png") no-repeat center center; }
+    /* line 217, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    .top-nav .small-btn:hover {
+      background: url("../images/btn-small-hover.png") no-repeat center center; }
+    /* line 220, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    .top-nav .small-btn:active {
+      background: url("../images/btn-small.png") no-repeat center center; }
+  /* line 224, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .top-nav .screenshot-btn {
+    display: block;
+    width: 62px;
+    background: url("../images/btn-screenshot.png") no-repeat center center; }
+    /* line 228, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    .top-nav .screenshot-btn:hover {
+      background: url("../images/btn-screenshot-hover.png") no-repeat center center; }
+    /* line 231, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    .top-nav .screenshot-btn:active {
+      background: url("../images/btn-screenshot.png") no-repeat center center; }
+  /* line 235, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .top-nav .tip-wrap {
+    position: absolute;
+    top: 0;
+    right: 31.25%;
+    display: block;
+    width: 109px;
+    height: 76px; }
+  /* line 243, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .top-nav .tip-btn {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 109px;
+    height: 76px;
+    background: url("../images/btn-tip.png") no-repeat center center; }
+    /* line 250, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    .top-nav .tip-btn:hover {
+      background: url("../images/btn-tip-hover.png") no-repeat center center; }
+      /* line 252, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+      .top-nav .tip-btn:hover .tip-con {
+        display: block;
+        top: 130px; }
+    /* line 258, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    .top-nav .tip-btn:hover + .tip-con, .top-nav .tip-btn.active + .tip-con {
+      display: block;
+      top: 130px; }
+    /* line 262, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    .top-nav .tip-btn:active {
+      background: url("../images/btn-tip.png") no-repeat center center; }
+  /* line 266, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .top-nav .tip-con {
+    position: absolute;
+    right: -50px;
+    top: 135px;
+    display: none;
+    width: 1010px;
+    min-height: 80px;
+    background: url("../images/box-bg-middle-2.png") repeat-y;
+    padding: 6px 0 13px 0;
+    -webkit-transition: all 0.35s;
+    -moz-transition: all 0.35s;
+    -ms-transition: all 0.35s;
+    -o-transition: all 0.35s;
+    transition: all 0.35s; }
+    /* line 280, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    .top-nav .tip-con > h6 {
+      left: 20px;
+      width: 140px;
+      height: 24px;
+      font-size: 0;
+      background: url("../images/tip-txt.png") no-repeat center center;
+      margin-top: -10px; }
+    /* line 290, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    .top-nav .tip-con:before, .top-nav .tip-con:after {
+      position: absolute;
+      left: 0;
+      content: '';
+      display: block;
+      z-index: 2; }
+    /* line 297, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    .top-nav .tip-con:before {
+      top: -49px;
+      width: 1010px;
+      height: 49px;
+      background: url("../images/box-bg-top-2.png") no-repeat top center; }
+    /* line 303, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    .top-nav .tip-con:after {
+      bottom: -30px;
+      width: 1010px;
+      height: 30px;
+      background: url("../images/box-bg-bottom-2.png") no-repeat top center; }
+    /* line 309, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    .top-nav .tip-con .operate-info {
+      width: 795px;
+      font-weight: bold;
+      color: #000;
+      padding: 0 15px 0 175px;
+      vertical-align: middle; }
+      /* line 315, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+      .top-nav .tip-con .operate-info > h6 {
+        position: relative;
+        font-size: 30px;
+        top: -25px;
+        z-index: 20; }
+      /* line 321, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+      .top-nav .tip-con .operate-info p {
+        font-size: 20px;
+        margin-top: -25px;
+        word-break: break-all;
+        word-wrap: break-word; }
+  /* line 328, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .top-nav .share-btn {
+    position: absolute;
+    text-indent: -9999px;
+    right: 0;
+    top: 0;
+    display: block;
+    width: 507px;
+    height: 140px;
+    background: url("../images/share-bg.png") no-repeat;
+    z-index: 10;
+    -webkit-transform-origin: right top;
+    -moz-transform-origin: right top;
+    -ms-transform-origin: right top;
+    -o-transform-origin: right top;
+    transform-origin: right top;
+    -webkit-transform: scale(0.98);
+    -moz-transform: scale(0.98);
+    -ms-transform: scale(0.98);
+    -o-transform: scale(0.98);
+    transform: scale(0.98); }
+    /* line 348, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    .top-nav .share-btn:hover {
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      -ms-transform: scale(1);
+      -o-transform: scale(1);
+      transform: scale(1); }
+    /* line 355, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    .top-nav .share-btn:active {
+      -webkit-transform: scale(0.98);
+      -moz-transform: scale(0.98);
+      -ms-transform: scale(0.98);
+      -o-transform: scale(0.98);
+      transform: scale(0.98); }
+
+/************current-info-box***********/
+/* line 371, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+.current-info-box {
+  position: fixed;
+  left: 45px;
+  top: 110px;
+  width: 190px;
+  height: 261px;
+  background: url("../images/cuurent-info-bg.png") no-repeat;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease; }
+  /* line 380, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .current-info-box .current-num {
+    margin-left: 12px; }
+    /* line 382, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    .current-info-box .current-num em {
+      display: inline-block;
+      *display: inline;
+      *zoom: 1;
+      width: 28px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      font-size: 40px;
+      color: #4658a6;
+      margin-left: 2px; }
+  /* line 395, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .current-info-box .use-times, .current-info-box .current-times, .current-info-box .disabled-time {
+    width: 65px;
+    height: 31px;
+    line-height: 31px;
+    text-align: right;
+    font-size: 22px;
+    color: #4658a6;
+    margin-left: 6px;
+    padding: 0 15px 0 100px; }
+  /* line 405, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .current-info-box .use-times {
+    margin-top: 46px; }
+  /* line 409, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .current-info-box .current-times, .current-info-box .disabled-time {
+    margin-top: 8px; }
+  /* line 412, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .current-info-box .disabled-time {
+    width: 90px;
+    padding: 0 15px 0 75px; }
+
+/************coordinate-info************/
+/* line 424, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+.coordinate-info {
+  position: absolute;
+  left: 20px;
+  bottom: 25px; }
+  /* line 429, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .coordinate-info .icon-coorinate {
+    float: left;
+    display: block;
+    width: 56px;
+    height: 55px;
+    background: url("../images/icon-coordinate.png") no-repeat;
+    vertical-align: middle;
+    margin-right: 15px; }
+  /* line 438, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .coordinate-info span {
+    float: left;
+    display: block;
+    height: 35px;
+    line-height: 35px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFF;
+    margin-top: 16px;
+    -webkit-text-shadow: 0 0 2px #723b1a, 0 0 2px #723b1a, 0 0 2px #723b1a;
+    -moz-text-shadow: 0 0 2px #723b1a, 0 0 2px #723b1a, 0 0 2px #723b1a;
+    text-shadow: 0 0 2px #723b1a, 0 0 2px #723b1a, 0 0 2px #723b1a; }
+
+/************color-sidebar************/
+@keyframes shake {
+  /* line 460, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  from {
+    transform: translateX(0); }
+
+  /* line 464, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  50% {
+    transform: translateX(-5px); }
+
+  /* line 468, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  to {
+    transform: translateX(0); } }
+
+/* line 473, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+.ani-shake {
+  animation-name: shake;
+  animation-duration: 1500ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; }
+
+/* line 480, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+.color-sidebar {
+  position: fixed;
+  top: 17.59259%;
+  right: 0;
+  width: 85px;
+  height: 741px;
+  background: url("../images/sidebar-bg.png") no-repeat;
+  z-index: 10;
+  font-size: 0;
+  padding: 55px 0 0 14px;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease; }
+  /* line 492, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .color-sidebar .icon-arrow {
+    position: absolute;
+    left: -17px;
+    top: 50%;
+    margin-top: -17px;
+    display: none;
+    width: 34px;
+    height: 34px;
+    background: url("../images/icon-arrow.png") no-repeat center center;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s; }
+  /* line 507, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .color-sidebar span {
+    position: relative;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    width: 100%;
+    height: 50px;
+    margin: 0 auto;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s; }
+    /* line 520, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    .color-sidebar span:nth-of-type(1) {
+      background: url("../images/color-1.png") no-repeat center center; }
+    /* line 520, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    .color-sidebar span:nth-of-type(2) {
+      background: url("../images/color-2.png") no-repeat center center; }
+    /* line 520, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    .color-sidebar span:nth-of-type(3) {
+      background: url("../images/color-3.png") no-repeat center center; }
+    /* line 520, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    .color-sidebar span:nth-of-type(4) {
+      background: url("../images/color-4.png") no-repeat center center; }
+    /* line 520, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    .color-sidebar span:nth-of-type(5) {
+      background: url("../images/color-5.png") no-repeat center center; }
+    /* line 520, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    .color-sidebar span:nth-of-type(6) {
+      background: url("../images/color-6.png") no-repeat center center; }
+    /* line 520, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    .color-sidebar span:nth-of-type(7) {
+      background: url("../images/color-7.png") no-repeat center center; }
+    /* line 520, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    .color-sidebar span:nth-of-type(8) {
+      background: url("../images/color-8.png") no-repeat center center; }
+    /* line 520, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    .color-sidebar span:nth-of-type(9) {
+      background: url("../images/color-9.png") no-repeat center center; }
+    /* line 520, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    .color-sidebar span:nth-of-type(10) {
+      background: url("../images/color-10.png") no-repeat center center; }
+    /* line 520, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    .color-sidebar span:nth-of-type(11) {
+      background: url("../images/color-11.png") no-repeat center center; }
+    /* line 520, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    .color-sidebar span:nth-of-type(12) {
+      background: url("../images/color-12.png") no-repeat center center; }
+    /* line 526, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    .color-sidebar span:hover .icon-arrow, .color-sidebar span.active .icon-arrow {
+      display: block; }
+    /* line 529, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    .color-sidebar span:hover {
+      cursor: pointer; }
+      /* line 532, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+      .color-sidebar span:hover:nth-of-type(1) {
+        background: url("../images/color-hover-1.png") no-repeat center center; }
+      /* line 532, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+      .color-sidebar span:hover:nth-of-type(2) {
+        background: url("../images/color-hover-2.png") no-repeat center center; }
+      /* line 532, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+      .color-sidebar span:hover:nth-of-type(3) {
+        background: url("../images/color-hover-3.png") no-repeat center center; }
+      /* line 532, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+      .color-sidebar span:hover:nth-of-type(4) {
+        background: url("../images/color-hover-4.png") no-repeat center center; }
+      /* line 532, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+      .color-sidebar span:hover:nth-of-type(5) {
+        background: url("../images/color-hover-5.png") no-repeat center center; }
+      /* line 532, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+      .color-sidebar span:hover:nth-of-type(6) {
+        background: url("../images/color-hover-6.png") no-repeat center center; }
+      /* line 532, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+      .color-sidebar span:hover:nth-of-type(7) {
+        background: url("../images/color-hover-7.png") no-repeat center center; }
+      /* line 532, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+      .color-sidebar span:hover:nth-of-type(8) {
+        background: url("../images/color-hover-8.png") no-repeat center center; }
+      /* line 532, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+      .color-sidebar span:hover:nth-of-type(9) {
+        background: url("../images/color-hover-9.png") no-repeat center center; }
+      /* line 532, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+      .color-sidebar span:hover:nth-of-type(10) {
+        background: url("../images/color-hover-10.png") no-repeat center center; }
+      /* line 532, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+      .color-sidebar span:hover:nth-of-type(11) {
+        background: url("../images/color-hover-11.png") no-repeat center center; }
+      /* line 532, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+      .color-sidebar span:hover:nth-of-type(12) {
+        background: url("../images/color-hover-12.png") no-repeat center center; }
+    /* line 537, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    .color-sidebar span:active {
+      -webkit-transform: scale(0.95);
+      -moz-transform: scale(0.95);
+      -ms-transform: scale(0.95);
+      -o-transform: scale(0.95);
+      transform: scale(0.95); }
+
+/************btns-box************/
+/* line 553, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+.btns-box-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%; }
+
+/* line 562, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+.btns-box {
+  position: absolute;
+  z-index: 9999999;
+  top: 50%;
+  left: 50%;
+  margin-top: -29px;
+  margin-left: -110px;
+  font-size: 0;
+  z-index: 50; }
+  /* line 571, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .btns-box a {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    width: 98px;
+    height: 58px;
+    margin: 0 6px;
+    -webkit-transform: scale(0.95);
+    -moz-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    -o-transform: scale(0.95);
+    transform: scale(0.95); }
+    /* line 581, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    .btns-box a:hover {
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      -ms-transform: scale(1);
+      -o-transform: scale(1);
+      transform: scale(1); }
+    /* line 588, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    .btns-box a:active {
+      -webkit-transform: scale(0.95);
+      -moz-transform: scale(0.95);
+      -ms-transform: scale(0.95);
+      -o-transform: scale(0.95);
+      transform: scale(0.95); }
+  /* line 596, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .btns-box .ok-btn {
+    background: url("../images/btn-ok.jpg") no-repeat; }
+  /* line 599, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .btns-box .cancel-btn {
+    background: url("../images/btn-cancel.jpg") no-repeat; }
+
+/*************pop*************/
+/* line 610, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+.pop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1000; }
+  /* line 617, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .pop .pop-main {
+    position: absolute;
+    left: 50%;
+    margin-left: -249.5px;
+    top: 35%;
+    width: 499px;
+    background: url("../images/pop-bg-middle.png") repeat-y;
+    z-index: 100; }
+    /* line 624, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    .pop .pop-main:before, .pop .pop-main:after {
+      position: absolute;
+      left: 0;
+      content: '';
+      display: block;
+      z-index: 2; }
+    /* line 631, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    .pop .pop-main:before {
+      top: -49px;
+      width: 499px;
+      height: 50px;
+      background: url("../images/pop-bg-top.png") no-repeat top center; }
+    /* line 637, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    .pop .pop-main:after {
+      bottom: -99px;
+      width: 499px;
+      height: 100px;
+      background: url("../images/pop-bg-bottom.png") no-repeat top center; }
+  /* line 644, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .pop .close-btn {
+    position: absolute;
+    z-index: 999;
+    right: 23px;
+    top: -40px;
+    display: block;
+    width: 28px;
+    height: 28px;
+    background: url("../images/btn-close.png") no-repeat;
+    -webkit-transform: scale(0.95);
+    -moz-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    -o-transform: scale(0.95);
+    transform: scale(0.95); }
+    /* line 658, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    .pop .close-btn:hover {
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      -ms-transform: scale(1);
+      -o-transform: scale(1);
+      transform: scale(1); }
+    /* line 665, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    .pop .close-btn:active {
+      -webkit-transform: scale(0.95);
+      -moz-transform: scale(0.95);
+      -ms-transform: scale(0.95);
+      -o-transform: scale(0.95);
+      transform: scale(0.95); }
+  /* line 673, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .pop .pop-con {
+    width: 320px;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 40px 0;
+    margin: 0 auto; }
+  /* line 680, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .pop .share-btn {
+    display: block;
+    width: 204px;
+    height: 63px;
+    text-align: center;
+    line-height: 58px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    background: url("../images/btn-share.png") no-repeat;
+    margin: 0 auto;
+    -webkit-transform: scale(0.95);
+    -moz-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    -o-transform: scale(0.95);
+    transform: scale(0.95); }
+    /* line 696, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    .pop .share-btn:hover {
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      -ms-transform: scale(1);
+      -o-transform: scale(1);
+      transform: scale(1); }
+    /* line 703, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    .pop .share-btn:active {
+      -webkit-transform: scale(0.95);
+      -moz-transform: scale(0.95);
+      -ms-transform: scale(0.95);
+      -o-transform: scale(0.95);
+      transform: scale(0.95); }
+  /* line 711, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .pop .fade-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    overflow: auto; }
+
+@keyframes rubberBand {
+  /* line 724, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  0% {
+    transform: scaleX(1); }
+
+  /* line 727, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  30% {
+    transform: scale3d(1.25, 0.75, 1); }
+
+  /* line 730, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  40% {
+    transform: scale3d(0.75, 1.25, 1); }
+
+  /* line 733, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  50% {
+    transform: scale3d(1.15, 0.85, 1); }
+
+  /* line 736, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  65% {
+    transform: scale3d(0.95, 1.05, 1); }
+
+  /* line 739, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  75% {
+    transform: scale3d(1.05, 0.95, 1); }
+
+  /* line 742, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  to {
+    transform: scaleX(1); } }
+
+/* line 747, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+.rubberBand {
+  animation-name: rubberBand;
+  animation-duration: 0.8s;
+  animation-iteration-count: 2; }
+
+@media screen and (min-width: 750px), (max-width: 1200px) {
+  @keyframes rubberBand {
+    /* line 756, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    0% {
+      transform: scaleX(0.75); }
+
+    /* line 759, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    30% {
+      transform: scale3d(0.9375, 0.5625, 0.75); }
+
+    /* line 762, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    40% {
+      transform: scale3d(0.5625, 0.9375, 0.75); }
+
+    /* line 765, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    50% {
+      transform: scale3d(0.8625, 0.6375, 0.75); }
+
+    /* line 768, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    65% {
+      transform: scale3d(0.7125, 0.7875, 0.75); }
+
+    /* line 771, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    75% {
+      transform: scale3d(0.7875, 0.7125, 0.75); }
+
+    /* line 774, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    to {
+      transform: scale(0.75); } }
+
+  /* line 779, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .rubberBand {
+    animation-name: rubberBand;
+    animation-duration: 0.8s;
+    animation-iteration-count: 2; }
+
+  /* line 791, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .top-nav .share-btn, .share-btn, .color-sidebar, .tool-box, .tip-wrap .tip-btn, .coordinate-info, .btns-box, .pop .pop-main {
+    -webkit-transform: scale(0.75);
+    -moz-transform: scale(0.75);
+    -ms-transform: scale(0.75);
+    -o-transform: scale(0.75);
+    transform: scale(0.75); }
+
+  /* line 798, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .top-nav .share-btn:hover {
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    transform: scale(0.8); }
+
+  /* line 805, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .top-nav .share-btn:active {
+    -webkit-transform: scale(0.75);
+    -moz-transform: scale(0.75);
+    -ms-transform: scale(0.75);
+    -o-transform: scale(0.75);
+    transform: scale(0.75); }
+
+  /* line 813, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .pop .pop-main, .btns-box {
+    -webkit-transform-origin: center center;
+    -moz-transform-origin: center center;
+    -ms-transform-origin: center center;
+    -o-transform-origin: center center;
+    transform-origin: center center; }
+
+  /* line 823, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .login-con, .tool-box, .tip-wrap, .coordinate-info {
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -ms-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center; }
+
+  /* line 831, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .top-nav .share-btn, .color-sidebar {
+    -webkit-transform-origin: right top;
+    -moz-transform-origin: right top;
+    -ms-transform-origin: right top;
+    -o-transform-origin: right top;
+    transform-origin: right top; }
+
+  /* line 839, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .top-nav .login-con {
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    transform: scale(0.8); }
+  /* line 846, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .top-nav .tool-box {
+    width: 247.5px;
+    margin-left: -123.75px; }
+
+  /* line 851, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .current-info-box {
+    -webkit-transform-origin: left top;
+    -moz-transform-origin: left top;
+    -ms-transform-origin: left top;
+    -o-transform-origin: left top;
+    transform-origin: left top; }
+    /* line 858, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    .current-info-box .current-num em {
+      font-size: 36px; }
+    /* line 864, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    .current-info-box .use-times, .current-info-box .current-times, .current-info-box .disabled-time {
+      font-size: 16px;
+      font-weight: bold; }
+ }
+
+@media screen and (min-width: 100px) and (max-width: 750px) {
+  /****/
+  @keyframes rubberBand {
+    /* line 875, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    0% {
+      transform: scaleX(0.75); }
+
+    /* line 878, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    30% {
+      transform: scale3d(0.9375, 0.5625, 0.75); }
+
+    /* line 881, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    40% {
+      transform: scale3d(0.5625, 0.9375, 0.75); }
+
+    /* line 884, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    50% {
+      transform: scale3d(0.8625, 0.6375, 0.75); }
+
+    /* line 887, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    65% {
+      transform: scale3d(0.7125, 0.7875, 0.75); }
+
+    /* line 890, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    75% {
+      transform: scale3d(0.7875, 0.7125, 0.75); }
+
+    /* line 893, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    to {
+      transform: scale(0.75); } }
+
+  /* line 898, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .rubberBand {
+    animation-name: rubberBand;
+    animation-duration: 0.8s;
+    animation-iteration-count: 2; }
+
+  /* line 910, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .top-nav .share-btn, .share-btn, .color-sidebar, .tool-box, .tip-wrap, .coordinate-info, .btns-box, .pop .pop-main {
+    -webkit-transform: scale(0.75);
+    -moz-transform: scale(0.75);
+    -ms-transform: scale(0.75);
+    -o-transform: scale(0.75);
+    transform: scale(0.75); }
+
+  /* line 917, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .top-nav .share-btn:hover {
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    transform: scale(0.8); }
+
+  /* line 924, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .top-nav .share-btn:active {
+    -webkit-transform: scale(0.75);
+    -moz-transform: scale(0.75);
+    -ms-transform: scale(0.75);
+    -o-transform: scale(0.75);
+    transform: scale(0.75); }
+
+  /* line 932, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .pop .pop-main, .btns-box {
+    -webkit-transform-origin: center center;
+    -moz-transform-origin: center center;
+    -ms-transform-origin: center center;
+    -o-transform-origin: center center;
+    transform-origin: center center; }
+
+  /* line 942, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .login-con, .tool-box, .tip-wrap, .coordinate-info {
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -ms-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center; }
+
+  /* line 950, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .top-nav .share-btn, .color-sidebar {
+    -webkit-transform-origin: right top;
+    -moz-transform-origin: right top;
+    -ms-transform-origin: right top;
+    -o-transform-origin: right top;
+    transform-origin: right top; }
+
+  /* line 958, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .top-nav .login-con {
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    transform: scale(0.8); }
+  /* line 965, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .top-nav .tool-box {
+    width: 247.5px;
+    margin-left: -123.75px; }
+
+  /* line 970, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .current-info-box {
+    -webkit-transform-origin: left top;
+    -moz-transform-origin: left top;
+    -ms-transform-origin: left top;
+    -o-transform-origin: left top;
+    transform-origin: left top; }
+    /* line 977, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    .current-info-box .current-num em {
+      font-size: 36px; }
+    /* line 983, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+    .current-info-box .use-times, .current-info-box .current-times, .current-info-box .disabled-time {
+      font-size: 16px;
+      font-weight: bold; }
+
+  /****/
+  /* line 989, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .jiathis_style_32x32 {
+    display: block !important; }
+
+  /* line 997, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .disabled-active-time, .scale-btn, .small-btn, .tip-wrap, .top-nav .disabled-time {
+    display: none !important; }
+
+  /* line 1001, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .login-con {
+    margin-left: 0 !important; }
+
+  /* line 1005, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .top-nav .share-btn {
+    background: #ffca0d !important;
+    width: 120px !important;
+    height: 40px !important;
+    top: 23px;
+    right: 10px;
+    border-radius: 5px;
+    text-indent: 0px;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    line-height: 40px; }
+
+  /* line 1019, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .screenshot-btn {
+    position: absolute !important;
+    right: 0; }
+
+  /* line 1023, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .color-sidebar {
+    top: 70px !important; }
+
+  /* line 1027, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .main.hideBar .top-nav {
+    -webkit-transform: translateY(-92px);
+    transform: translateY(-92px); }
+
+  /* line 1031, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .main.hideBar .color-sidebar {
+    -webkit-transform: translateX(100px) scale(0.75);
+    transform: translateX(100px) scale(0.75); }
+
+  /* line 1035, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  .main.hideBar .current-info-box {
+    -webkit-transform: translateX(-235px) scale(0.75);
+    transform: translateX(-235px) scale(0.75); }
+ }
+
+/* line 1041, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+.jiathis_style_32x32 {
+  position: absolute;
+  z-index: 999999;
+  top: 50%;
+  left: 50%;
+  padding: 10px;
+  height: 32px; }
+
+/* line 1051, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+.third-login {
+  position: absolute;
+  z-index: 999999;
+  top: 60px;
+  left: 50px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #ca6615; }
+
+/* line 1061, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+.third-login:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  border-top: 5px solid transparent;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #ca6615; }
+
+/* line 1072, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+.third-login > a {
+  display: block;
+  float: left;
+  width: 32px;
+  height: 32px;
+  border-radius: 5px;
+  cursor: pointer !important; }
+
+/* line 1080, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+.third-login > a.wb-login {
+  background-image: url(../images/login-icon-wb.png); }
+
+/* line 1083, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+.third-login > a.qq-login {
+  margin-left: 10px;
+  background-image: url(../images/login-icon-qq.png); }
+
+/* line 1087, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+.colorMask {
+  position: absolute;
+  display: block;
+  pointer-events: none; }
+
+@keyframes flash {
+  /* line 1094, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  from {
+    opacity: 0.7; }
+
+  /* line 1097, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  50% {
+    opacity: 0; }
+
+  /* line 1100, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+  to {
+    opacity: 0.7; } }
+
+/* line 1105, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+.ani-flash {
+  animation-name: flash;
+  animation-iteration-count: 2;
+  animation-duration: 500ms;
+  animation-timing-function: linear; }
+
+/* line 1111, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+.loading-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 140px;
+  height: 170px;
+  margin-top: -140px;
+  margin-left: -85px;
+  color: #3f4665;
+  text-align: center; }
+
+/* line 1122, e:/workSpace/2017/07/yhzr-hbgc/code/wwwroot/css/style */
+.loading {
+  display: block;
+  width: 140px;
+  height: 140px;
+  background-image: url(../images/loading.gif);
+  background-position: center -60px;
+  border-radius: 15px; }
